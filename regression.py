@@ -17,12 +17,12 @@ class LinearRegressionScratch:
         return sum((X[i] - mean_x) * (Y[i] - mean_y) for i in range(len(X)))
 
     def fit(self, X, Y):
-        # Slope m = covariance / variance
+   
         self.m = self.covariance(X, Y) / self.variance(X)
         mean_x = self.mean(X)
         mean_y = self.mean(Y)
 
-        # Intercept c = meanY - m * meanX
+       
         self.c = mean_y - self.m * mean_x
 
     def predict(self, x):
@@ -36,7 +36,7 @@ class LinearRegressionScratch:
         return total / len(X)
 
 
-# ---------- MAIN CODE ----------
+
 if __name__ == "__main__":
     # Example dataset (Height vs Weight)
     X = [150, 160, 170, 180]
@@ -51,3 +51,4 @@ if __name__ == "__main__":
     print("\nPrediction for height 175 cm =", model.predict(175))
 
     print("\nModel MSE =", model.mse(X, Y))
+
